@@ -1,11 +1,15 @@
 package com.example.entenstarterpack
 
+import android.content.Intent
 import android.media.MediaPlayer
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.PopupMenu
-import android.widget.PopupWindow
 import kotlinx.android.synthetic.main.activity_main.*
+
+import android.view.Menu
+
+import android.view.MenuItem
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,47 +29,61 @@ class MainActivity : AppCompatActivity() {
         ballerLos = MediaPlayer.create(this, R.raw.ballerlos)
         gokhanAbi = MediaPlayer.create(this, R.raw.gokhanabi)
         volo62 = MediaPlayer.create(this, R.raw.kommenurmitvolo62)
-        ferrari = MediaPlayer.create()
 
 
         // Wo sind deine Jungs, wo?
-        btn0.setOnClickListener({
+        btn0.setOnClickListener {
             woSindDeineJungs.seekTo(0)
             woSindDeineJungs.start()
-        })
+        }
 
         // QDH
-        btn1.setOnClickListener({
+        btn1.setOnClickListener {
             qdh.seekTo(0)
             qdh.start()
-        })
+        }
 
         // Baller Los
-        btn2.setOnClickListener({
+        btn2.setOnClickListener {
             ballerLos.seekTo(0)
             ballerLos.start()
-        })
+        }
 
         // Gökhan Abi
-        btn3.setOnClickListener({
+        btn3.setOnClickListener {
             gokhanAbi.seekTo(0)
             gokhanAbi.start()
-        })
+        }
 
         // Volo 62
-        btn4.setOnClickListener({
+        btn4.setOnClickListener {
             volo62.seekTo(0)
             volo62.start()
-        })
+        }
 
+        /*
         btn5.setOnClickListener({
-            foo.seekTo(0, 0)
-            foo.start()
+            ferrari.seekTo(0)
+            ferrari.start()
         })
-
+        */
 
 
         setSupportActionBar(toolbar2)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.toolbar, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+
+        val intent = Intent(this, FeedbackActivity::class.java)
+        startActivity(intent)
+
+        return super.onOptionsItemSelected(item)
     }
 
 }
