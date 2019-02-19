@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var ballerLos: MediaPlayer
     private lateinit var gokhanAbi: MediaPlayer
     private lateinit var volo62: MediaPlayer
-    private lateinit var ferrari: MediaPlayer
+    private lateinit var gringosauer: MediaPlayer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         ballerLos = MediaPlayer.create(this, R.raw.ballerlos)
         gokhanAbi = MediaPlayer.create(this, R.raw.gokhanabi)
         volo62 = MediaPlayer.create(this, R.raw.kommenurmitvolo62)
-
+        gringosauer = MediaPlayer.create(this, R.raw.gringosauer)
 
         // Wo sind deine Jungs, wo?
         btn0.setOnClickListener {
@@ -61,12 +61,12 @@ class MainActivity : AppCompatActivity() {
             volo62.start()
         }
 
-        /*
+        // Gringo ist sauer
         btn5.setOnClickListener({
-            ferrari.seekTo(0)
-            ferrari.start()
+            gringosauer.seekTo(0)
+            gringosauer.start()
         })
-        */
+
 
 
         setSupportActionBar(toolbar2)

@@ -23,7 +23,7 @@
             android:layout_marginBottom="8dp" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp">
+            android:layout_marginEnd="8dp" app:layout_constraintHorizontal_bias="0.0">
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                       android:orientation="vertical">
             <Button
@@ -47,7 +47,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="149dp" android:id="@+id/btn4"/>
             <Button
-                    android:text="ferrari"
+                    android:text="Gringo ist sauer"
                     android:layout_width="match_parent"
                     android:layout_height="149dp" android:id="@+id/btn5"/>
             <TextView
